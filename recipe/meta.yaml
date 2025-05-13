@@ -1,5 +1,5 @@
 {% set name = "curryreader" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/curryreader-{{ version }}.tar.gz
-  sha256: 2abaf79c7fe12b56578bc83594afc635c517481395ceedfd527f1dc885e38ded
+  sha256: 945c2f8fa4f9b19e2bb93b547f2d1b9e225631a96ac6a61e45d609c8a68310fa
 
 build:
   noarch: python
@@ -39,6 +39,7 @@ test:
     - curryreader
   commands:
     - pip check
+    - python -c "import curryreader; ver = curryreader.__version__; assert ver == '{{ version }}', ver"
   requires:
     - python {{ python_min }}
     - pip
