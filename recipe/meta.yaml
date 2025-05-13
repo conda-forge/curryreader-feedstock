@@ -39,6 +39,7 @@ test:
     - curryreader
   commands:
     - pip check
+    - python -c "import curryreader; ver = curryreader.__version__; assert ver == '{{ version }}', ver"
   requires:
     - python {{ python_min }}
     - pip
