@@ -1,5 +1,5 @@
 {% set name = "curryreader" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/curryreader-{{ version }}.tar.gz
-  sha256: 945c2f8fa4f9b19e2bb93b547f2d1b9e225631a96ac6a61e45d609c8a68310fa
+  sha256: 3f1f821e0e386ca7ad2a2422dcb699e3180daa153cc91d74796ccc9f1f83bf41
 
 build:
   noarch: python
